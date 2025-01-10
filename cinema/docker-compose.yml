@@ -1,0 +1,18 @@
+services:
+  mysql_db:
+    image: mysql:8.0  # MySQL 버전을 명시적으로 지정
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./db/mysql/data:/var/lib/mysql      # MySQL 데이터 영구 저장 위치
+      - ./db/mysql/init:/docker-entrypoint-initdb.d #해당 경로에 작성된 DDL 을 컨테이너 생성 시 자동 실
+    restart: always
+    environment:
+      MYSQL_DATABASE: cinema_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: rootpassword
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
