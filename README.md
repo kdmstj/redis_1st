@@ -1,6 +1,8 @@
-
 ## Multi Module
-
+- adapter : 어댑터 모듈
+- application : 포트 모듈
+- domain : 도메인 모듈
+- api : 웹 어플리케이션 진입점 모듈
 
 ## Entity Relationship Diagram
 <img width="822" alt="redis_erd" src="https://github.com/user-attachments/assets/e29a1f00-8f2c-40bf-99df-749d741025e9" />
