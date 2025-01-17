@@ -2,10 +2,9 @@ package com.hanghae.cinema.adapter.persistence.mapper;
 
 import com.hanghae.cinema.adapter.persistence.entity.MovieEntity;
 import com.hanghae.cinema.domain.model.Movie;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+@Component
 public class MovieEntityMapper {
     public Movie toDomain(MovieEntity entity) {
         return Movie.builder()
@@ -16,11 +15,5 @@ public class MovieEntityMapper {
                 .runningTime(entity.getRunningTime())
                 .genre(entity.getGenre())
                 .build();
-    }
-
-    public List<Movie> toDomainList(List<MovieEntity> entityList) {
-        return entityList.stream()
-                .map(this::toDomain)
-                .collect(Collectors.toList());
     }
 }

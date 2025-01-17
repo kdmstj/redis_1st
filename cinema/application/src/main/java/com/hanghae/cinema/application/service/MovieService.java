@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -23,6 +24,9 @@ public class MovieService implements FindMovieUseCase {
 
         LocalDate today = LocalDate.now();
         List<Movie> movieList = findMoviePort.getMovieList(today);
-        return movieMapper.toResponseDTOList(movieList);
+
+        return movieList.stream()
+                .map(movieMapper::toResponseDTO)
+                .collect(Collectors.toList());
     }
 }

@@ -2,10 +2,9 @@ package com.hanghae.cinema.application.mapper;
 
 import com.hanghae.cinema.application.dto.MovieResponseDTO;
 import com.hanghae.cinema.domain.model.Movie;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+@Component
 public class MovieMapper {
 
     public MovieResponseDTO toResponseDTO(Movie movie) {
@@ -18,11 +17,5 @@ public class MovieMapper {
                 .runningTime(movie.getRunningTime())
                 .genre(movie.getGenre())
                 .build();
-    }
-
-    public List<MovieResponseDTO> toResponseDTOList(List<Movie> movieList) {
-        return movieList.stream()
-                .map(this::toResponseDTO)
-                .collect(Collectors.toList());
     }
 }
