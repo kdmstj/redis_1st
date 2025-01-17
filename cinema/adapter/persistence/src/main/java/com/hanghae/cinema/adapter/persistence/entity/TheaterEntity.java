@@ -3,7 +3,7 @@ package com.hanghae.cinema.adapter.persistence.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_theater")
+@Table(name = "theater")
 public class TheaterEntity extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

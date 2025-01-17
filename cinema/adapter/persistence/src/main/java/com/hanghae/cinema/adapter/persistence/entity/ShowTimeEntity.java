@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_showtime")
+@Table(name = "show_time")
 public class ShowTimeEntity extends BaseEntity {
 
     @Id
