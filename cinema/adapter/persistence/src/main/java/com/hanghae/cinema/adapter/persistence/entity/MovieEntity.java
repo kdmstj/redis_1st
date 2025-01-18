@@ -2,11 +2,11 @@ package com.hanghae.cinema.adapter.persistence.entity;
 
 import com.hanghae.cinema.domain.type.MovieGenre;
 import com.hanghae.cinema.domain.type.MovieRating;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -29,7 +29,7 @@ public class MovieEntity extends BaseEntity {
 
     private LocalDate releaseAt;
 
-    private Integer runningTime;
+    private Integer runningTime; //시간 단위 (분)
 
     @Enumerated(EnumType.STRING)
     private MovieGenre genre;

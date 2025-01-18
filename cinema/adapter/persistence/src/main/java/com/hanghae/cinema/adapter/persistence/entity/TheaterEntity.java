@@ -1,8 +1,10 @@
 package com.hanghae.cinema.adapter.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
+@Getter
 @Table(name = "theater")
 public class TheaterEntity extends BaseEntity {
 

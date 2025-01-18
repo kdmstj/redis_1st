@@ -1,13 +1,13 @@
 package com.hanghae.cinema.application.port;
 
-import com.hanghae.cinema.domain.model.Movie;
+import com.hanghae.cinema.application.dto.MovieResponseDTO;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Component
 public interface FindMoviePort {
 
-    List<Movie> getMovieList(LocalDate today);
+    List<MovieResponseDTO> getMovieList(LocalDateTime today);
 }

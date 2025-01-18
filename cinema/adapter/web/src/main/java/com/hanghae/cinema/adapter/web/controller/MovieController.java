@@ -19,7 +19,7 @@ public class MovieController {
     private final FindMovieUseCase findMovieUseCase;
 
     @GetMapping
-    public ResponseEntity<List<MovieResponseDTO>> getReleasedMovieList() {
+    public ResponseEntity<List<MovieResponseDTO>> getMovie() {
         return ResponseEntity.ok(findMovieUseCase.getMovies());
     }
 }
