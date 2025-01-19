@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Set;
+import java.util.List;
 
 @Builder
 @Getter
@@ -22,5 +22,5 @@ public class MovieResponseDTO {
     private LocalDate releaseAt;
     private Integer runningTime;
     private MovieGenre genre;
-    private Set<ShowTimeResponseDTO> showTime;
+    private List<ShowTimeResponseDTO> showTime;
 }
