@@ -16,7 +16,7 @@ public class MoviePersistenceAdapter implements FindMoviePort {
 
     private final MovieRepository movieRepository;
 
-    public List<MovieResponseDTO> getMovieList(LocalDateTime dateTime, String keyword, MovieGenre movieGenre) {
+    public List<MovieResponseDTO> getMovie(LocalDateTime dateTime, String keyword, MovieGenre movieGenre) {
         return movieRepository.findMovie(dateTime.toLocalDate(), dateTime, keyword, movieGenre);
     }
 }

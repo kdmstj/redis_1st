@@ -21,6 +21,6 @@ public class MovieService implements FindMovieUseCase {
 
         LocalDateTime today = LocalDateTime.now();
 
-        return findMoviePort.getMovieList(today, keyword, genre);
+        return findMoviePort.getMovie(today, keyword, genre);
     }
 }

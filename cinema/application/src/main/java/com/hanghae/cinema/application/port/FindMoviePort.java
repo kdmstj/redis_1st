@@ -10,5 +10,5 @@ import java.util.List;
 @Component
 public interface FindMoviePort {
 
-    List<MovieResponseDTO> getMovieList(LocalDateTime today, String keyword, MovieGenre genre);
+    List<MovieResponseDTO> getMovie(LocalDateTime today, String keyword, MovieGenre genre);
 }
