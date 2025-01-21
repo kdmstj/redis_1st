@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Repository
 public interface MovieRepository extends JpaRepository<MovieEntity, Long>, MovieRepositoryCustom {
     @Query("""
                     select m.id, m.title, m.thumbNail, m.rating, m.releaseAt, m.runningTime, m.genre,
