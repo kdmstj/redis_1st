@@ -16,6 +16,6 @@ public class Movie {
     private String thumbNail;
     private MovieRating rating;
     private LocalDate releaseAt;
-    private Integer runningTime; //시간 단위 (분)
+    private Integer runningTimeMinute; //시간 단위 (분)
     private MovieGenre genre;
 }

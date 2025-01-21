@@ -51,7 +51,7 @@ public class MovieRepositoryCustomImpl implements MovieRepositoryCustom {
                         movieEntity.thumbNail,
                         movieEntity.rating,
                         movieEntity.releaseAt,
-                        movieEntity.runningTime,
+                        movieEntity.runningTimeMinute,
                         movieEntity.genre,
                         showTimeEntity.id,
                         showTimeEntity.startedAt,
@@ -76,7 +76,7 @@ public class MovieRepositoryCustomImpl implements MovieRepositoryCustom {
                     tuple.get(movieEntity.thumbNail),
                     tuple.get(movieEntity.rating),
                     tuple.get(movieEntity.releaseAt),
-                    tuple.get(movieEntity.runningTime),
+                    tuple.get(movieEntity.runningTimeMinute),
                     tuple.get(movieEntity.genre),
                     new ArrayList<>()
             ));

@@ -20,7 +20,7 @@ public class MovieResponseDTO {
     private String thumbNail;
     private MovieRating rating;
     private LocalDate releaseAt;
-    private Integer runningTime;
+    private Integer runningTimeMinute;
     private MovieGenre genre;
     private List<ShowTimeResponseDTO> showTime;
 }
