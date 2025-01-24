@@ -33,7 +33,7 @@ public class MovieRepositoryCustomImpl implements MovieRepositoryCustom {
         BooleanBuilder builder = new BooleanBuilder();
 
         if (keyword != null && !keyword.isEmpty()) {
-            builder.and(movieEntity.title.containsIgnoreCase(keyword));
+            builder.and(movieEntity.title.eq(keyword));
         }
 
         if (movieGenre != null) {
