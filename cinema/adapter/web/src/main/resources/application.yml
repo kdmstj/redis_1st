@@ -9,6 +9,10 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6389
 
 server:
   servlet:
