@@ -29,7 +29,7 @@ public class MovieEntity extends BaseEntity {
 
     private LocalDate releaseAt;
 
-    private Integer runningTime; //시간 단위 (분)
+    private Integer runningTimeMinute; //시간 단위 (분)
 
     @Enumerated(EnumType.STRING)
     private MovieGenre genre;
